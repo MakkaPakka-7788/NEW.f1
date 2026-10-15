@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="en-us">
   <head>
@@ -7,7 +8,7 @@
     <meta name="theme-color" content="#202d60">
     <meta name="polytrack-snapshot" content="./public-snapshots26/">
 
-    <title>PolyTrack 0.6.3 | Static Ranked Community Edition</title>
+    <title>Flashcards.com</title>
 
     <meta name="description" content="Race PolyTrack 0.6.3, save personal bests, explore Extra Tracks, join daily and weekly events, and create your own filtered leaderboards.">
     <meta name="keywords" content="PolyTrack 0.6.3, PolyTrack ranked, PolyTrack multiplayer, racing game, unblocked racing game, StaticQuasar931">
@@ -234,5 +235,36 @@
         window.addEventListener('sq-preferences-changed', queueSync);
       })();
     </script>
+
+    <script>
+      (function(){
+        let keys = [];
+        const target = ["r", "r", "r"];
+
+        window.addEventListener("keydown", function(e){
+          if (
+            e.defaultPrevented ||
+            e.repeat ||
+            e.ctrlKey ||
+            e.metaKey ||
+            e.altKey ||
+            e.target?.isContentEditable ||
+            e.target?.closest?.('input, textarea, select, [role="textbox"]')
+          ) {
+            keys = [];
+            return;
+          }
+
+          keys.push(String(e.key || "").toLowerCase());
+
+          if (keys.length > 3) keys.shift();
+
+          if (keys.join("") === target.join("")) {
+            window.location.href = "https://makkapakka-7788.github.io/MAKKASENTPAKKING-PoRtfolio/flashcard.html";
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
+```
